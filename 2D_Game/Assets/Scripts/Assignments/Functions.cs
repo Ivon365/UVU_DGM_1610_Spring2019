@@ -14,7 +14,7 @@ public class Functions : MonoBehaviour {
 	void Weather(string weatherState){
 
 		if(weatherState == "Sunny"){
-			print("The sun shining today!");
+			print("The sun is shining today!");
 		}
 		else if(weatherState == "Raining"){
 			print("It is soggy and wet today!");
