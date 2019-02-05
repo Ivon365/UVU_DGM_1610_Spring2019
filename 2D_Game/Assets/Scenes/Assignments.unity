@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 902334567}
   - component: {fileID: 902334566}
   - component: {fileID: 902334568}
+  - component: {fileID: 902334569}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8408518b740e141b90cf381ae99e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chatState: Shinanigans
+  chatState: Monkey
 --- !u!4 &902334567
 Transform:
   m_ObjectHideFlags: 0
@@ -167,7 +168,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189eaa87cee71af499af662d68aceeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionState: 
+  positionState: Monkey
+--- !u!114 &902334569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 902334565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c55856591caed24986dd6c5a78b82ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightState: On
 --- !u!1 &1147534314
 GameObject:
   m_ObjectHideFlags: 0
