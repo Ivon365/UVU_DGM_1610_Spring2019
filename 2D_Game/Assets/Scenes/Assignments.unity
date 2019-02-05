@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8408518b740e141b90cf381ae99e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chatState: Hello
+  chatState: Shinanigans
 --- !u!4 &902334567
 Transform:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189eaa87cee71af499af662d68aceeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionState: Yell
+  positionState: 
 --- !u!1 &1147534314
 GameObject:
   m_ObjectHideFlags: 0
