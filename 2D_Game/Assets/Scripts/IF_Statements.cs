@@ -31,8 +31,13 @@ public class IF_Statements : MonoBehaviour
                 print("Thank you for preparing to stop!");
             }
         }
-        else if (stopLight == "Green" && !isUtahn){
-            print("Check phone, turn up radio, sit at the light until almost yellow, then go!");
+        else if (stopLight == "Green"){
+            if(isUtahn){
+                print("Check phone, turn up radio, sit at the light until almost yellow, then go!");
+            }
+            else{
+                print("Thank you for going!");
+            }
         }
         //if condition is NOT met then condition will run else code
         else{
