@@ -17,7 +17,7 @@ private bool grounded;
 
 // Use this for initialization
 void Start () {
-	grounded = true
+	grounded = true;
 
 }
 	

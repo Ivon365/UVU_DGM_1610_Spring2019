@@ -17,18 +17,18 @@ public class IF_Statements : MonoBehaviour
         if(stopLight == "Red"){
         //Block of code that is run if the condition is met
             if(isUtahn){
-                print("STOP! The light is RED!")
+                print("STOP! The light is RED!");
             }
             else{
-                print("Thank you for stopping at the red light!")
+                print("Thank you for stopping at the red light!");
             }
         }
         else if (stopLight == "Yellow"){
             if(isUtahn){
-                print("You got this brah!")
+                print("You got this brah!");
             }
             else{
-                print("Thank you for preparing to stop!")
+                print("Thank you for preparing to stop!");
             }
         }
         else if (stopLight == "Green" && !isUtahn){
