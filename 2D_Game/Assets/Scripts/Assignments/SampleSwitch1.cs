@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SampleSwitch1 : MonoBehaviour {
 
-	public string TacoGuy
+	public string TacoGuy;
 
 	// Use this for initialization
 	void Start () {

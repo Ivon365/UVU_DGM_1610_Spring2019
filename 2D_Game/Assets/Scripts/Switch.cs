@@ -5,16 +5,15 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public string suspect;
-
     // Start is called before the first frame update
     void Start()
     {
-        MurderMystery(suspect);
+        MurderMystery (suspect);
     }
 
     void MurderMystery (string person)
     {
-        
+    
     switch(person){
         case "Mr. Ketchup":
         case "Mr. Radish":
