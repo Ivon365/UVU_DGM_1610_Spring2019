@@ -9,7 +9,10 @@ public float moveSpeed;
 public float jumpHeight;
 
 //player grounded variables
-private bool grounded;
+public bool grounded;
+public Transform groundCheck;
+public float groundCheckRadius;
+public LayerMask whatIsGround;
 
 // this && that (this and that must be true)
 // this || that (this or that must be true)
@@ -17,22 +20,29 @@ private bool grounded;
 
 // Use this for initialization
 void Start () {
-	grounded = true;
 
 }
+
+void FixedUpdate(){
+	grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+}
 	
-// Update is called once per frame
-void Update () {
-	if(Input.GetKey(KeyCode.D)){
-		GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-	} 
-	else if(Input.GetKey(KeyCode.A)){
-		GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y); 
-	}
+	// Update is called once per frame
+	void Update () {
+		//Moves player left and right
+		if(Input.GetKey(KeyCode.D)){
+			GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		} 
+		else if(Input.GetKey(KeyCode.A)){
+			GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y); 
+		}
 		
-	if(Input.GetKeyDown(KeyCode.W)&& grounded){
+		//Make player jump
+		if(Input.GetKeyDown(KeyCode.W)&& grounded){
+			Jump();
+		}
+	}
+	void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
 	}
-	
-}
 }

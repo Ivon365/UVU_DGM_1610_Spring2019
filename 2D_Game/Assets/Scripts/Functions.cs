@@ -9,6 +9,10 @@ public class Functions : MonoBehaviour {
 
 	void Start(){
 		Weather(weather);
+		/*See functions that return a value below
+		Print returns a value to the console. */
+		print(Sum(36,24));
+		print(Multi(20,5));
 	}
 
 	void Weather(string weatherState){
@@ -31,5 +35,15 @@ public class Functions : MonoBehaviour {
 		else{
 			print("I don't understand "+weatherState);
 		}
+	}
+
+	/* Functions that can return a value
+	return returns a value of two or more variables */
+
+	int Sum(int a, int b){
+		return a + b;
+	}
+	int Multi(int c, int d){
+		return c * d;
 	}
 }

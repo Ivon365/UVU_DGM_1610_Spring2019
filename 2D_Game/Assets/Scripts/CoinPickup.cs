@@ -13,6 +13,5 @@ public class CoinPickup : MonoBehaviour
 
             Destroy(gameObject);
         }
-
     }
 }
