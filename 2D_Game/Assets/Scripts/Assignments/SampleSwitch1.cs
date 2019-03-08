@@ -5,11 +5,14 @@ using UnityEngine;
 public class SampleSwitch1 : MonoBehaviour {
 
 	public string TacoGuy;
+<<<<<<< Updated upstream
 
 	// Use this for initialization
 	void Start () {
 		
 	}
+=======
+>>>>>>> Stashed changes
 	
 	// Update is called once per frame
 	void Update () {
