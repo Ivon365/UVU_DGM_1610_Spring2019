@@ -14,7 +14,7 @@ public class ArraysListsDicts : MonoBehaviour {
 	//Array example- Not Scalable
 	public string[] clientList = new string[]{"Greg","Kate","Adam","Mia","Fred"};
 
-	//List example- Scalable
+	//List example- Scalable (will not accept mixed data types)
 	public List<string> santasList = new List<string>();
 
 	//ArrayList Example- Not viewable in editor

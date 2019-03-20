@@ -1,10 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 67f20cc10c56a2940898e252e64840f4
 timeCreated: 1552456946
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 4
+=======
+guid: af7829f9d973d9d40a9cc26dec6c761f
+TextureImporter:
+  fileIDToRecycleName: {}
+  externalObjects: {}
+  serializedVersion: 9
+>>>>>>> master
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -12,6 +20,11 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+<<<<<<< HEAD
+=======
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+>>>>>>> master
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -20,6 +33,11 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+<<<<<<< HEAD
+=======
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+>>>>>>> master
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -27,10 +45,20 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+<<<<<<< HEAD
     filterMode: -1
     aniso: -1
     mipBias: -1
     wrapMode: 1
+=======
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+>>>>>>> master
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -39,30 +67,64 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+=======
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+>>>>>>> master
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+<<<<<<< HEAD
+=======
+  singleChannelComponent: 0
+>>>>>>> master
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
+<<<<<<< HEAD
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+=======
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+>>>>>>> master
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD
+=======
+    androidETC2FallbackOverride: 0
+>>>>>>> master
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
+<<<<<<< HEAD
   spritePackingTag: 
+=======
+    physicsShape: []
+    bones: []
+    spriteID: 5a1f53a496c9cd34bb9e4f1b86b6e08e
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+>>>>>>> master
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 74c32ece45e3bcb4db449ae503520c4a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Monsterz
+  fontNames:
+  - Monsterz
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5765a81d960998a4ca68406b9c37d64c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
