@@ -8,7 +8,7 @@ public class HealthBar : MonoBehaviour {
 	public int HealthWindow;
 	public int currentHP;
 
-	public Text Health;
+	Text Health;
 
 	void Start () {
 		//Sets HP to a value of 100 at the start of the game
@@ -26,9 +26,10 @@ public class HealthBar : MonoBehaviour {
 		
 	}
 
-	public void DamageDealt(int amt){
-		//deducts HP depending on the amt of damage taken
-		currentHP -= amt;
+	public void DamageDealt(int damage){
+		/* deducts HP depending on the amt of damage taken
+		Same as currentHP=currentHP-damage */
+		currentHP -= damage;
 		//When HP goes to 0 then it will be game over.
 		if(currentHP <= 0){
 			currentHP = 0;
