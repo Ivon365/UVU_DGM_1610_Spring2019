@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
-
 	public int HealthWindow;
 	public int currentHP;
 
@@ -33,7 +32,10 @@ public class HealthBar : MonoBehaviour {
 		//When HP goes to 0 then it will be game over.
 		if(currentHP <= 0){
 			currentHP = 0;
-			print("You died! Game over!");
+            print("You're dead! Game Over!");
 		}
 	}
 }
+        
+    
+

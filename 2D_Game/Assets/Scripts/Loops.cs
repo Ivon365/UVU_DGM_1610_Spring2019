@@ -12,6 +12,10 @@ public class Loops : MonoBehaviour
         for(int i=100; i <= bottles; i--){
             print(i +" bottles of milk on the wall.");
         }
+
+        // while(bottles <= 100){
+        //     print(bottles + " bottles of milk on the wall");
+        // }
         
     }
 
