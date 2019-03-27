@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 55213365}
   - component: {fileID: 55213364}
   - component: {fileID: 55213363}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: BadBoy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,11 +243,12 @@ MonoBehaviour:
   moveSpeed: 5
   moveRight: 0
   wallCheck: {fileID: 1906234608}
-  wallCheckRadius: 5
+  wallCheckRadius: 0.1
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
   edgeCheck: {fileID: 1570277530}
+  scale: {x: 0, y: 0, z: 0}
 --- !u!50 &55213364
 Rigidbody2D:
   serializedVersion: 4
@@ -291,7 +292,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.13626, y: 0.13625994}
   m_EdgeRadius: 0
 --- !u!212 &55213366
 SpriteRenderer:
@@ -341,7 +342,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55213362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.22, y: 0.25, z: 173.08789}
+  m_LocalPosition: {x: -1.36, y: 0.23, z: 173.08789}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 1906234608}
@@ -489,7 +490,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179261921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.85, y: -0.03, z: 173.08789}
+  m_LocalPosition: {x: -3.06, y: 0.07, z: 173.08789}
   m_LocalScale: {x: 5, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -912,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -433.5, y: 219}
+  m_AnchoredPosition: {x: -436, y: 218}
   m_SizeDelta: {x: 95, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219717706
@@ -1047,7 +1048,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268479997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.54, y: 0.5, z: 0}
+  m_LocalPosition: {x: 3.23, y: 0.58, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 5}
   m_Children:
   - {fileID: 1949858925}
@@ -1112,7 +1113,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1570277530}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: EdgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1126,7 +1127,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1570277529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.131, y: -0.083, z: 0}
+  m_LocalPosition: {x: -0.1, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 55213367}
@@ -4409,7 +4410,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1906234608}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4423,7 +4424,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1906234607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.115, y: 0, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 55213367}
@@ -4596,7 +4597,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.16, y: 0.15999997}
   m_EdgeRadius: 0
 --- !u!212 &2022472833
 SpriteRenderer:
