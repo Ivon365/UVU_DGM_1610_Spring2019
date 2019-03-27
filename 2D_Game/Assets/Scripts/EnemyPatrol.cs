@@ -15,9 +15,11 @@ public class EnemyPatrol : MonoBehaviour
     //edge check
     bool notAtEdge;
     public Transform edgeCheck;
+    public Vector3 scale;
     // Start is called before the first frame update
     void Start()
     {
+        scale = transform.localScale;
         
     }
 
@@ -33,11 +35,11 @@ public class EnemyPatrol : MonoBehaviour
         }
 
         if (moveRight){
-            transform.localScale = new Vector3(-10f,10f,1f);
+            transform.localScale = new Vector3(-scale.x,scale.y,scale.z);
             GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
         else {
-            transform.localScale = new Vector3(10f,10f,1f);
+            transform.localScale = new Vector3(scale.x,scale.y,scale.z);
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
         

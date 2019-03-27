@@ -36,6 +36,11 @@ public class Loops : MonoBehaviour
         {
             print(item);
         }
+
+        // while(bottles <= 100){
+        //     print(bottles + " bottles of milk on the wall");
+        // }
+        
     }
 
     // Update is called once per frame
