@@ -17,12 +17,14 @@ public class HealthBar : MonoBehaviour {
 		currentHP = HealthWindow;
 		//Calls on the text UI in Unity
 		Health = GetComponent<Text>();
+
+		//Concats the " " plus the value of the current HP.
+		Health.text = " " + currentHP;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//Concats the " " plus the value of the current HP.
-		Health.text = " " + currentHP;
+
 		
 	}
 
