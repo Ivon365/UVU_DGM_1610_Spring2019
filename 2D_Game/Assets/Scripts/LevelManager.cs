@@ -26,6 +26,8 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		pcRigid = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+		player = GameObject.Find("Player");
 		
 
 		// Player = FindObjectOfType<Rigidbody2D> ();
@@ -36,21 +38,21 @@ public class LevelManager : MonoBehaviour {
 		StartCoroutine ("RespawnPlayerCo");
 	}
 
+//IEnumerator are a part of coroutines
 	public IEnumerator RespawnPlayerCo(){
 		//Generate Death Particle
 		Instantiate (deathParticle, pcRigid.transform.position, pcRigid.transform.rotation);
-		//Hide Player
-		// player.enabled = false;
+		//Hide PC
 		player.SetActive(false);
-		pcRigid.GetComponent<Renderer> ().enabled = false;
-		// Gravity Reset
+		player.GetComponent<Renderer> ().enabled = false;
+		// Gravity Reset- Resets gravity and velocity
 		gravityStore = pcRigid.GetComponent<Rigidbody2D>().gravityScale;
 		pcRigid.GetComponent<Rigidbody2D>().gravityScale = 0f;
 		pcRigid.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		// Point Penalty
 		ScoreManager.AddPoints(-pointPenaltyOnDeath);
 		//Debug Message
-		Debug.Log ("Player Respawn");
+		Debug.Log ("PC Respawn");
 		//Respawn Delay
 		yield return new WaitForSeconds (respawnDelay);
 		//Gravity Restore
