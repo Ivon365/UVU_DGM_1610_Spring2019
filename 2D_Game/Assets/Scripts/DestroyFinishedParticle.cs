@@ -15,12 +15,12 @@ public class DestroyFinishedParticle : MonoBehaviour
     void Update()
     {
         if(thisParticleSystem.isPlaying)
-            return
+            return;
         
         Destroy(gameObject);
     }
 
-    void OnBecameVisible (){
+    void OnBecameInvisible (){
         Destroy(gameObject);
     }
 }
