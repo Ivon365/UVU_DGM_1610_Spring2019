@@ -6,10 +6,10 @@ public class Variables : MonoBehaviour {
 	// Variables
 	public static int number; 
 	public float speed;
-	public string name;
+    private string name;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		/*
 		This
 		is
