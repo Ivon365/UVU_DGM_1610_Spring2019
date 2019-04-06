@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillPlayer : MonoBehaviour {
-
-
+public class KillPlayer : MonoBehaviour
+{
     public LevelManager levelManager;
 
     //Use this for initialization

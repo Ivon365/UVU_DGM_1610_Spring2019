@@ -14,6 +14,12 @@ public Transform groundCheck;
 public float groundCheckRadius;
 public LayerMask whatIsGround;
 
+//player on wall variables
+public bool onWall;
+public Transform wallCheck;
+public float wallCheckRadius;
+public LayerMask whatIsWall;
+
 // this && that (this and that must be true)
 // this || that (this or that must be true)
 // !Not this (Think of not gates in minecraft if true won't run, if not true will run)
@@ -24,7 +30,10 @@ void Start () {
 }
 
 void FixedUpdate(){
+	//this is for jumping off the ground
 	grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+	//this is for jumping off the wall
+	onWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
 }
 	
 	// Update is called once per frame
@@ -37,8 +46,13 @@ void FixedUpdate(){
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y); 
 		}
 		
-		//Make player jump
+		//Make player jump off the ground
 		if(Input.GetKeyDown(KeyCode.W)&& grounded){
+			Jump();
+		}
+
+		//Make player jump off the wall
+		if (Input.GetKeyDown(KeyCode.W)&& onWall){
 			Jump();
 		}
 	}
