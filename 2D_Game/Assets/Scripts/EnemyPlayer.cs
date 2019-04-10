@@ -17,12 +17,11 @@ public class EnemyPlayer : MonoBehaviour {
 		Health = 100;
 		HealthCount = Health;
 		HealthCounter = GetComponent<Text>();
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		HealthCounter.text = " " + HealthCount;
+		
 		
 	}
 

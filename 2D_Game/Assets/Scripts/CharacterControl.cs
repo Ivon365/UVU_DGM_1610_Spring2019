@@ -20,12 +20,15 @@ public Transform wallCheck;
 public float wallCheckRadius;
 public LayerMask whatIsWall;
 
+public Vector3 scale;
+
 // this && that (this and that must be true)
 // this || that (this or that must be true)
 // !Not this (Think of not gates in minecraft if true won't run, if not true will run)
 
 // Use this for initialization
 void Start () {
+	scale = transform.localScale;
 
 }
 
@@ -55,6 +58,13 @@ void FixedUpdate(){
 		if (Input.GetKeyDown(KeyCode.W)&& onWall){
 			Jump();
 		}
+
+		//Player flip
+		if (GetComponent<Rigidbody2D>().velocity.x > 0)
+			transform.localScale = new Vector3(scale.x,scale.y,scale.z);
+
+		else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+			transform.localScale = new Vector3(-scale.x,scale.y,scale.z);
 	}
 	void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
