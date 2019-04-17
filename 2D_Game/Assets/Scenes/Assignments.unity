@@ -413,6 +413,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!1 &303732471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 612421596456030047, guid: f012c01ab2f46b3409feb83658ecc50d,
+    type: 3}
+  m_PrefabInstance: {fileID: 612421595671800209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &347658557
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +664,12 @@ MonoBehaviour:
   isFollowing: 0
   xOffset: 0
   yOffset: 0
+--- !u!1 &580419614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 999125739394864920, guid: 2260ec5cc48cae74597ae9296e6d34d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 999125738278203517}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &755994204
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,13 +730,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckPoint: {fileID: 1541147687}
-  pcRigid: {fileID: 0}
-  player: {fileID: 0}
-  deathParticle: {fileID: 1823169776370884, guid: c2a9d2a741ecd284ab90dfc10ee9d2b2,
-    type: 3}
-  respawnParticle: {fileID: 1914479973450336, guid: a609c644cb8a98b439dc323a4e2d9a6f,
-    type: 3}
-  respawnDelay: 0
+  pcRigid: {fileID: 1935386334}
+  player: {fileID: 1935386331}
+  deathParticle: {fileID: 580419614}
+  respawnParticle: {fileID: 303732471}
+  respawnDelay: 1
   pointPenaltyOnDeath: 0
 --- !u!4 &895777752
 Transform:
@@ -1057,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537c19731f4143a419e1f8c7c630e89b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 0}
+  levelManager: {fileID: 895777751}
 --- !u!1 &1344220718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3432130707565349878, guid: c68fcd39e9aef5b468a8536302d00220,
@@ -1217,6 +1227,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1935386331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8407663872883696875, guid: f10ac7786f7057147842ef5b5b70668b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8407663874289242368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1935386334 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8407663872883696878, guid: f10ac7786f7057147842ef5b5b70668b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8407663874289242368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1935386338
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935386331}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cec63ffdb6bc21345a9e47ffb69b873a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2003217338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,6 +1735,21 @@ PrefabInstance:
       propertyPath: speed
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 3432130707565349879, guid: c68fcd39e9aef5b468a8536302d00220,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1935386331}
+    - target: {fileID: 3432130707565349879, guid: c68fcd39e9aef5b468a8536302d00220,
+        type: 3}
+      propertyPath: enemyDeath
+      value: 
+      objectReference: {fileID: 580419614}
+    - target: {fileID: 3432130707565349879, guid: c68fcd39e9aef5b468a8536302d00220,
+        type: 3}
+      propertyPath: projectileParticle
+      value: 
+      objectReference: {fileID: 1344220718}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c68fcd39e9aef5b468a8536302d00220, type: 3}
 --- !u!1001 &8407663874289242368
@@ -1779,5 +1835,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 5.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8407663872883696877, guid: f10ac7786f7057147842ef5b5b70668b,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407663872883696877, guid: f10ac7786f7057147842ef5b5b70668b,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1935386338}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f10ac7786f7057147842ef5b5b70668b, type: 3}

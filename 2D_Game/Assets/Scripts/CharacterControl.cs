@@ -7,6 +7,8 @@ public class CharacterControl : MonoBehaviour {
 //player movement variables
 public float moveSpeed; 
 public float jumpHeight;
+private bool doubleJump;
+private float moveVelocity;
 
 //player grounded variables
 public bool grounded;
@@ -14,13 +16,9 @@ public Transform groundCheck;
 public float groundCheckRadius;
 public LayerMask whatIsGround;
 
-//player on wall variables
-public bool onWall;
-public Transform wallCheck;
-public float wallCheckRadius;
-public LayerMask whatIsWall;
-
 public Vector3 scale;
+
+public Animator animator;
 
 // this && that (this and that must be true)
 // this || that (this or that must be true)
@@ -35,29 +33,51 @@ void Start () {
 void FixedUpdate(){
 	//this is for jumping off the ground
 	grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-	//this is for jumping off the wall
-	onWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
 }
 	
 	// Update is called once per frame
 	void Update () {
 		//Moves player left and right
 		if(Input.GetKey(KeyCode.D)){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-		} 
-		else if(Input.GetKey(KeyCode.A)){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y); 
+			//GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			moveVelocity = moveSpeed;
+			animator.SetBool("isWalking",true);
 		}
+
+		else if(Input.GetKeyUp (KeyCode.D)){
+			animator.SetBool("isWalking",false);
+		}
+		 
+		if(Input.GetKey(KeyCode.A)){
+			//GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y); 
+			moveVelocity = -moveSpeed;
+			animator.SetBool("isWalking",true);
+		}
+
+		else if(Input.GetKeyUp(KeyCode.A)){
+			animator.SetBool("isWalking",false);
+		}
+
+		GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 		
 		//Make player jump off the ground
 		if(Input.GetKeyDown(KeyCode.W)&& grounded){
 			Jump();
 		}
 
-		//Make player jump off the wall
-		if (Input.GetKeyDown(KeyCode.W)&& onWall){
-			Jump();
+		//Double jump code
+		if(grounded){
+			doubleJump = false;
+			animator.SetBool("isJumping",false);
 		}
+
+		if(Input.GetKeyDown (KeyCode.A)&& !doubleJump && !grounded){
+			Jump();
+			doubleJump = true;
+		}
+
+		//Non-Slide Player
+		moveVelocity = 0f;
 
 		//Player flip
 		if (GetComponent<Rigidbody2D>().velocity.x > 0)
