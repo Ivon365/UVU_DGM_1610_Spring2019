@@ -60,7 +60,6 @@ public class LevelManager : MonoBehaviour {
 		//Match Players transform position
 		pcRigid.transform.position = currentCheckPoint.transform.position;
 		//Show Player
-		// player.enabled = true;
 		player.SetActive(true);
 		pcRigid.GetComponent<Renderer> ().enabled = true;
 		//Spawn Particle
